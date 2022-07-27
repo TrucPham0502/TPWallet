@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FEBA65A5289181A400E5A7B0 /* TPWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65A4289181A400E5A7B0 /* TPWalletApp.swift */; };
+		FEBA65A7289181A400E5A7B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65A6289181A400E5A7B0 /* ContentView.swift */; };
+		FEBA65A9289181A700E5A7B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBA65A8289181A700E5A7B0 /* Assets.xcassets */; };
+		FEBA65AC289181A700E5A7B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBA65AB289181A700E5A7B0 /* Preview Assets.xcassets */; };
+		FEBA65B6289181A700E5A7B0 /* TPWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65B5289181A700E5A7B0 /* TPWalletTests.swift */; };
+		FEBA65C0289181A700E5A7B0 /* TPWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65BF289181A700E5A7B0 /* TPWalletUITests.swift */; };
+		FEBA65C2289181A700E5A7B0 /* TPWalletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65C1289181A700E5A7B0 /* TPWalletUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FEBA65B2289181A700E5A7B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEBA6599289181A400E5A7B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEBA65A0289181A400E5A7B0;
+			remoteInfo = TPWallet;
+		};
+		FEBA65BC289181A700E5A7B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEBA6599289181A400E5A7B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEBA65A0289181A400E5A7B0;
+			remoteInfo = TPWallet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FEBA65A1289181A400E5A7B0 /* TPWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEBA65A4289181A400E5A7B0 /* TPWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPWalletApp.swift; sourceTree = "<group>"; };
+		FEBA65A6289181A400E5A7B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FEBA65A8289181A700E5A7B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FEBA65AB289181A700E5A7B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FEBA65B1289181A700E5A7B0 /* TPWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TPWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEBA65B5289181A700E5A7B0 /* TPWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPWalletTests.swift; sourceTree = "<group>"; };
+		FEBA65BB289181A700E5A7B0 /* TPWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TPWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEBA65BF289181A700E5A7B0 /* TPWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPWalletUITests.swift; sourceTree = "<group>"; };
+		FEBA65C1289181A700E5A7B0 /* TPWalletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPWalletUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEBA659E289181A400E5A7B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEBA65AE289181A700E5A7B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEBA65B8289181A700E5A7B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FEBA6598289181A400E5A7B0 = {
+			isa = PBXGroup;
+			children = (
+				FEBA65A3289181A400E5A7B0 /* TPWallet */,
+				FEBA65B4289181A700E5A7B0 /* TPWalletTests */,
+				FEBA65BE289181A700E5A7B0 /* TPWalletUITests */,
+				FEBA65A2289181A400E5A7B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FEBA65A2289181A400E5A7B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEBA65A1289181A400E5A7B0 /* TPWallet.app */,
+				FEBA65B1289181A700E5A7B0 /* TPWalletTests.xctest */,
+				FEBA65BB289181A700E5A7B0 /* TPWalletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEBA65A3289181A400E5A7B0 /* TPWallet */ = {
+			isa = PBXGroup;
+			children = (
+				FEBA65A4289181A400E5A7B0 /* TPWalletApp.swift */,
+				FEBA65A6289181A400E5A7B0 /* ContentView.swift */,
+				FEBA65A8289181A700E5A7B0 /* Assets.xcassets */,
+				FEBA65AA289181A700E5A7B0 /* Preview Content */,
+			);
+			path = TPWallet;
+			sourceTree = "<group>";
+		};
+		FEBA65AA289181A700E5A7B0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FEBA65AB289181A700E5A7B0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FEBA65B4289181A700E5A7B0 /* TPWalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEBA65B5289181A700E5A7B0 /* TPWalletTests.swift */,
+			);
+			path = TPWalletTests;
+			sourceTree = "<group>";
+		};
+		FEBA65BE289181A700E5A7B0 /* TPWalletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FEBA65BF289181A700E5A7B0 /* TPWalletUITests.swift */,
+				FEBA65C1289181A700E5A7B0 /* TPWalletUITestsLaunchTests.swift */,
+			);
+			path = TPWalletUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEBA65A0289181A400E5A7B0 /* TPWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEBA65C5289181A700E5A7B0 /* Build configuration list for PBXNativeTarget "TPWallet" */;
+			buildPhases = (
+				FEBA659D289181A400E5A7B0 /* Sources */,
+				FEBA659E289181A400E5A7B0 /* Frameworks */,
+				FEBA659F289181A400E5A7B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TPWallet;
+			productName = TPWallet;
+			productReference = FEBA65A1289181A400E5A7B0 /* TPWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FEBA65B0289181A700E5A7B0 /* TPWalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEBA65C8289181A700E5A7B0 /* Build configuration list for PBXNativeTarget "TPWalletTests" */;
+			buildPhases = (
+				FEBA65AD289181A700E5A7B0 /* Sources */,
+				FEBA65AE289181A700E5A7B0 /* Frameworks */,
+				FEBA65AF289181A700E5A7B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEBA65B3289181A700E5A7B0 /* PBXTargetDependency */,
+			);
+			name = TPWalletTests;
+			productName = TPWalletTests;
+			productReference = FEBA65B1289181A700E5A7B0 /* TPWalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FEBA65BA289181A700E5A7B0 /* TPWalletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEBA65CB289181A700E5A7B0 /* Build configuration list for PBXNativeTarget "TPWalletUITests" */;
+			buildPhases = (
+				FEBA65B7289181A700E5A7B0 /* Sources */,
+				FEBA65B8289181A700E5A7B0 /* Frameworks */,
+				FEBA65B9289181A700E5A7B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEBA65BD289181A700E5A7B0 /* PBXTargetDependency */,
+			);
+			name = TPWalletUITests;
+			productName = TPWalletUITests;
+			productReference = FEBA65BB289181A700E5A7B0 /* TPWalletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEBA6599289181A400E5A7B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					FEBA65A0289181A400E5A7B0 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					FEBA65B0289181A700E5A7B0 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = FEBA65A0289181A400E5A7B0;
+					};
+					FEBA65BA289181A700E5A7B0 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = FEBA65A0289181A400E5A7B0;
+					};
+				};
+			};
+			buildConfigurationList = FEBA659C289181A400E5A7B0 /* Build configuration list for PBXProject "TPWallet" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FEBA6598289181A400E5A7B0;
+			productRefGroup = FEBA65A2289181A400E5A7B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEBA65A0289181A400E5A7B0 /* TPWallet */,
+				FEBA65B0289181A700E5A7B0 /* TPWalletTests */,
+				FEBA65BA289181A700E5A7B0 /* TPWalletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEBA659F289181A400E5A7B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEBA65AC289181A700E5A7B0 /* Preview Assets.xcassets in Resources */,
+				FEBA65A9289181A700E5A7B0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEBA65AF289181A700E5A7B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEBA65B9289181A700E5A7B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEBA659D289181A400E5A7B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEBA65A7289181A400E5A7B0 /* ContentView.swift in Sources */,
+				FEBA65A5289181A400E5A7B0 /* TPWalletApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEBA65AD289181A700E5A7B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEBA65B6289181A700E5A7B0 /* TPWalletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEBA65B7289181A700E5A7B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEBA65C2289181A700E5A7B0 /* TPWalletUITestsLaunchTests.swift in Sources */,
+				FEBA65C0289181A700E5A7B0 /* TPWalletUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FEBA65B3289181A700E5A7B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FEBA65A0289181A400E5A7B0 /* TPWallet */;
+			targetProxy = FEBA65B2289181A700E5A7B0 /* PBXContainerItemProxy */;
+		};
+		FEBA65BD289181A700E5A7B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FEBA65A0289181A400E5A7B0 /* TPWallet */;
+			targetProxy = FEBA65BC289181A700E5A7B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FEBA65C3289181A700E5A7B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FEBA65C4289181A700E5A7B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FEBA65C6289181A700E5A7B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TPWallet/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TrucPham.TPWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FEBA65C7289181A700E5A7B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TPWallet/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TrucPham.TPWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FEBA65C9289181A700E5A7B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TrucPham.TPWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TPWallet.app/TPWallet";
+			};
+			name = Debug;
+		};
+		FEBA65CA289181A700E5A7B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TrucPham.TPWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TPWallet.app/TPWallet";
+			};
+			name = Release;
+		};
+		FEBA65CC289181A700E5A7B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TrucPham.TPWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TPWallet;
+			};
+			name = Debug;
+		};
+		FEBA65CD289181A700E5A7B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TrucPham.TPWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TPWallet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEBA659C289181A400E5A7B0 /* Build configuration list for PBXProject "TPWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEBA65C3289181A700E5A7B0 /* Debug */,
+				FEBA65C4289181A700E5A7B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEBA65C5289181A700E5A7B0 /* Build configuration list for PBXNativeTarget "TPWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEBA65C6289181A700E5A7B0 /* Debug */,
+				FEBA65C7289181A700E5A7B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEBA65C8289181A700E5A7B0 /* Build configuration list for PBXNativeTarget "TPWalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEBA65C9289181A700E5A7B0 /* Debug */,
+				FEBA65CA289181A700E5A7B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEBA65CB289181A700E5A7B0 /* Build configuration list for PBXNativeTarget "TPWalletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEBA65CC289181A700E5A7B0 /* Debug */,
+				FEBA65CD289181A700E5A7B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FEBA6599289181A400E5A7B0 /* Project object */;
+}
