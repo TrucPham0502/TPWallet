@@ -14,6 +14,7 @@ struct WalletModel : Identifiable {
     let money : Double
 }
 struct HomeView: View {
+    @State var currentProgress : CGFloat = 0
     let walletData : [WalletModel] = [
         .init(id: UUID().uuidString, image: "Amazon WC", name: "Amazon", date: Date(), money: -103.56),
         .init(id: UUID().uuidString,image: "Mcdonalds WC", name: "Mcdonalds", date: Date(), money: -34.78),
@@ -65,18 +66,18 @@ struct HomeView: View {
                     Circle().stroke(LinearGradient(colors: [Color("2D2E53"),Color("201F3F")], startPoint: .topLeading, endPoint: .bottomTrailing),style: .init(lineWidth: (circleSize - inCircleSize) / 2, lineCap: .round))
                         .frame(width: inCircleSize + ((circleSize - inCircleSize) / 2), height: inCircleSize + ((circleSize - inCircleSize) / 2))
 
-                    Circle().trim(from: 0.3, to: 0.5).stroke(LinearGradient(colors: [Color("0DA6C2"), Color("61DE70")], startPoint: .top, endPoint: .bottom),style: .init(lineWidth: 36, lineCap: .round))
+                    Circle().trim(from: currentProgress, to: currentProgress + 0.2).stroke(LinearGradient(colors: [Color("0DA6C2"), Color("61DE70")], startPoint: .top, endPoint: .bottom),style: .init(lineWidth: 36, lineCap: .round))
                        
                         .frame(width: inCircleSize + ((circleSize - inCircleSize) / 2), height:inCircleSize + ((circleSize - inCircleSize) / 2))
                         .shadow()
                         .rotationEffect(.init(radians: 180))
   
-                    Circle().trim(from: 0.45, to: 0.65).stroke(LinearGradient(colors: [Color("0DA6C2"), Color("0E39C6")], startPoint: .top, endPoint: .bottom),style: .init(lineWidth: 36, lineCap: .round))
+                    Circle().trim(from: currentProgress + 0.15, to: currentProgress + 0.35).stroke(LinearGradient(colors: [Color("0DA6C2"), Color("0E39C6")], startPoint: .top, endPoint: .bottom),style: .init(lineWidth: 36, lineCap: .round))
                         .frame(width: inCircleSize + ((circleSize - inCircleSize) / 2), height: inCircleSize + ((circleSize - inCircleSize) / 2))
                         .shadow()
                         .rotationEffect(.init(radians: 180))
 
-                    Circle().trim(from: 0.6, to: 0.8).stroke(LinearGradient(colors: [Color("9327F0"), Color("320DAF")], startPoint: .trailing, endPoint: .leading),style: .init(lineWidth: 36, lineCap: .round))
+                    Circle().trim(from: currentProgress + 0.3, to: currentProgress + 0.5).stroke(LinearGradient(colors: [Color("9327F0"), Color("320DAF")], startPoint: .trailing, endPoint: .leading),style: .init(lineWidth: 36, lineCap: .round))
                         .frame(width: inCircleSize + ((circleSize - inCircleSize) / 2), height: inCircleSize + ((circleSize - inCircleSize) / 2))
                         .shadow()
                         .rotationEffect(.init(radians: 180))
@@ -95,7 +96,11 @@ struct HomeView: View {
                         .font(.system(size: 17, weight: .bold))
                     ScrollView(.vertical, showsIndicators: false) {
                         ForEach(walletData, id: \.id) {item in
-                            itemWallet(item)
+                            itemWallet(item).onTapGesture {
+                                withAnimation{
+                                    currentProgress = Double.random(min: 0, max: 1)
+                                }
+                            }
                         }
                     }.padding(.bottom, 30)
                     
@@ -113,6 +118,11 @@ struct HomeView: View {
                 }
                 
             )
+            .onAppear{
+                withAnimation{
+                    currentProgress = 0.3
+                }
+            }
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -194,3 +204,18 @@ extension Date {
     }
 }
 
+public extension Double {
+
+    /// Returns a random floating point number between 0.0 and 1.0, inclusive.
+    static var random: Double {
+        return Double(arc4random()) / 0xFFFFFFFF
+    }
+
+    /// Random double between 0 and n-1.
+    ///
+    /// - Parameter n:  Interval max
+    /// - Returns:      Returns a random double point number between 0 and n max
+    static func random(min: Double, max: Double) -> Double {
+        return Double.random * (max - min) + min
+    }
+}
