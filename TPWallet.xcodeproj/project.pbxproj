@@ -17,6 +17,8 @@
 		FEBA65CF289184C600E5A7B0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65CE289184C600E5A7B0 /* MainView.swift */; };
 		FEBA65D12891851900E5A7B0 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65D02891851900E5A7B0 /* TabBarView.swift */; };
 		FEBA65D328918FE500E5A7B0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65D228918FE500E5A7B0 /* HomeView.swift */; };
+		FEBA65D52892BF9500E5A7B0 /* StatictisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65D42892BF9500E5A7B0 /* StatictisView.swift */; };
+		FEBA65D72892C04900E5A7B0 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65D62892C04900E5A7B0 /* LineGraph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		FEBA65CE289184C600E5A7B0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FEBA65D02891851900E5A7B0 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		FEBA65D228918FE500E5A7B0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FEBA65D42892BF9500E5A7B0 /* StatictisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatictisView.swift; sourceTree = "<group>"; };
+		FEBA65D62892C04900E5A7B0 /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				FEBA65CE289184C600E5A7B0 /* MainView.swift */,
 				FEBA65D02891851900E5A7B0 /* TabBarView.swift */,
 				FEBA65D228918FE500E5A7B0 /* HomeView.swift */,
+				FEBA65D42892BF9500E5A7B0 /* StatictisView.swift */,
+				FEBA65D62892C04900E5A7B0 /* LineGraph.swift */,
 			);
 			path = TPWallet;
 			sourceTree = "<group>";
@@ -267,10 +273,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEBA65A7289181A400E5A7B0 /* ContentView.swift in Sources */,
+				FEBA65D72892C04900E5A7B0 /* LineGraph.swift in Sources */,
 				FEBA65CF289184C600E5A7B0 /* MainView.swift in Sources */,
 				FEBA65A5289181A400E5A7B0 /* TPWalletApp.swift in Sources */,
 				FEBA65D328918FE500E5A7B0 /* HomeView.swift in Sources */,
 				FEBA65D12891851900E5A7B0 /* TabBarView.swift in Sources */,
+				FEBA65D52892BF9500E5A7B0 /* StatictisView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

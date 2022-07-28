@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @Namespace var tabEffect
-    @State var tabSelected : TabBar = .home
+    @State var tabSelected : TabBar = .statistic
     init() {
         UITabBar.appearance().isHidden = true
     }
@@ -18,7 +18,7 @@ struct MainView: View {
             HomeView().tag(TabBar.home)
             Text("Cards").tag(TabBar.cards)
             Text("Profile").tag(TabBar.profile)
-            Text("Statictis").tag(TabBar.statistic)
+            StatictisView().tag(TabBar.statistic)
         }
         .overlay(TabBarView(tabBarEffect: tabEffect, currentTab: $tabSelected), alignment: .bottom)
         

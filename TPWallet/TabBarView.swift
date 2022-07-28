@@ -48,7 +48,7 @@ struct TabBarView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.top, 30)
                     .foregroundColor(currentTab == tab ? Color("00D7FF") : Color("7B78AA"))
-                    .shadow(radius: currentTab == tab ? 15 : 0)
+                    .shadow(radius: currentTab == tab ? 20 : 0)
             }
             
         }.frame(height: 50)
@@ -108,7 +108,7 @@ struct VisualEffectView: UIViewRepresentable {
     }
 }
 extension View {
-    func shadow(radius: CGFloat = 5, opacity: CGFloat = 0.3) -> some View {
+    func shadowBlur(radius: CGFloat = 5, opacity: CGFloat = 0.3) -> some View {
         self.overlay(Rectangle()
             .fill(Color.clear)
             .opacity(opacity)

@@ -69,17 +69,17 @@ struct HomeView: View {
                     Circle().trim(from: currentProgress, to: currentProgress + 0.2).stroke(LinearGradient(colors: [Color("0DA6C2"), Color("61DE70")], startPoint: .top, endPoint: .bottom),style: .init(lineWidth: 36, lineCap: .round))
                        
                         .frame(width: inCircleSize + ((circleSize - inCircleSize) / 2), height:inCircleSize + ((circleSize - inCircleSize) / 2))
-                        .shadow()
+                        .shadowBlur()
                         .rotationEffect(.init(radians: 180))
   
                     Circle().trim(from: currentProgress + 0.15, to: currentProgress + 0.35).stroke(LinearGradient(colors: [Color("0DA6C2"), Color("0E39C6")], startPoint: .top, endPoint: .bottom),style: .init(lineWidth: 36, lineCap: .round))
                         .frame(width: inCircleSize + ((circleSize - inCircleSize) / 2), height: inCircleSize + ((circleSize - inCircleSize) / 2))
-                        .shadow()
+                        .shadowBlur()
                         .rotationEffect(.init(radians: 180))
 
                     Circle().trim(from: currentProgress + 0.3, to: currentProgress + 0.5).stroke(LinearGradient(colors: [Color("9327F0"), Color("320DAF")], startPoint: .trailing, endPoint: .leading),style: .init(lineWidth: 36, lineCap: .round))
                         .frame(width: inCircleSize + ((circleSize - inCircleSize) / 2), height: inCircleSize + ((circleSize - inCircleSize) / 2))
-                        .shadow()
+                        .shadowBlur()
                         .rotationEffect(.init(radians: 180))
                     
                     VStack(spacing: 5) {
