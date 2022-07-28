@@ -15,7 +15,7 @@ struct MainView: View {
     }
     var body: some View {
         TabView(selection: $tabSelected){
-            HomeView().tag(TabBar.home).tabConfig()
+            HomeView().tag(TabBar.home)
             Text("Cards").tag(TabBar.cards)
             Text("Profile").tag(TabBar.profile)
             Text("Statictis").tag(TabBar.statistic)
@@ -28,12 +28,5 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-extension View {
-    @ViewBuilder
-    func tabConfig() -> some View {
-        self.frame(maxWidth: .infinity, maxHeight: .infinity).background(Color("19173D").ignoresSafeArea())
-            
     }
 }

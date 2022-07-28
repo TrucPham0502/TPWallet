@@ -17,8 +17,12 @@ struct TabBarView: View {
             }
         }
         .background(
-            Color("7B78AA").blur(radius: 60).clipShape(BottomCurve(centerX: self.getCenterXValue())).shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: -5)
-                .ignoresSafeArea(.container, edges: .bottom).matchedGeometryEffect(id: "shapeEffect", in: tabBarEffect).animation(.spring())
+            ZStack {
+                BottomCurve(centerX: self.getCenterXValue()).stroke(Color("7B78AA"), lineWidth: 1)
+                VisualEffectView(effect: UIBlurEffect(style: .dark)).opacity(00.9).clipShape(BottomCurve(centerX: self.getCenterXValue())).shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: -5)
+                    .ignoresSafeArea(.container, edges: .bottom).matchedGeometryEffect(id: "shapeEffect", in: tabBarEffect).animation(.spring())
+            }
+           
             
         )
     }
@@ -35,6 +39,7 @@ struct TabBarView: View {
                     currentTab = tab
                 }
             } label: {
+                
                 Image(tab.rawValue)
                     .resizable()
                     .renderingMode(.template)
@@ -43,7 +48,7 @@ struct TabBarView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.top, 30)
                     .foregroundColor(currentTab == tab ? Color("00D7FF") : Color("7B78AA"))
-                    .contentShape(Rectangle())
+                    .shadow(radius: currentTab == tab ? 15 : 0)
             }
             
         }.frame(height: 50)
@@ -89,5 +94,25 @@ struct BottomCurve: Shape {
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+struct VisualEffectView: UIViewRepresentable {
+    var effect: UIVisualEffect?
+    func makeUIView(context: UIViewRepresentableContext<Self>) -> UIVisualEffectView {
+        let blur = UIVisualEffectView()
+        return blur
+        
+    }
+    func updateUIView(_ uiView: UIVisualEffectView, context: UIViewRepresentableContext<Self>) {
+        uiView.effect = effect
+    }
+}
+extension View {
+    func shadow(radius: CGFloat = 5, opacity: CGFloat = 0.3) -> some View {
+        self.overlay(Rectangle()
+            .fill(Color.clear)
+            .opacity(opacity)
+            .mask(self)
+            .overlay(self.blur(radius: radius)))
     }
 }
