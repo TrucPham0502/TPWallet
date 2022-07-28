@@ -14,6 +14,9 @@
 		FEBA65B6289181A700E5A7B0 /* TPWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65B5289181A700E5A7B0 /* TPWalletTests.swift */; };
 		FEBA65C0289181A700E5A7B0 /* TPWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65BF289181A700E5A7B0 /* TPWalletUITests.swift */; };
 		FEBA65C2289181A700E5A7B0 /* TPWalletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65C1289181A700E5A7B0 /* TPWalletUITestsLaunchTests.swift */; };
+		FEBA65CF289184C600E5A7B0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65CE289184C600E5A7B0 /* MainView.swift */; };
+		FEBA65D12891851900E5A7B0 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65D02891851900E5A7B0 /* TabBarView.swift */; };
+		FEBA65D328918FE500E5A7B0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65D228918FE500E5A7B0 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		FEBA65BB289181A700E5A7B0 /* TPWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TPWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBA65BF289181A700E5A7B0 /* TPWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPWalletUITests.swift; sourceTree = "<group>"; };
 		FEBA65C1289181A700E5A7B0 /* TPWalletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPWalletUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FEBA65CE289184C600E5A7B0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FEBA65D02891851900E5A7B0 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		FEBA65D228918FE500E5A7B0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 				FEBA65A6289181A400E5A7B0 /* ContentView.swift */,
 				FEBA65A8289181A700E5A7B0 /* Assets.xcassets */,
 				FEBA65AA289181A700E5A7B0 /* Preview Content */,
+				FEBA65CE289184C600E5A7B0 /* MainView.swift */,
+				FEBA65D02891851900E5A7B0 /* TabBarView.swift */,
+				FEBA65D228918FE500E5A7B0 /* HomeView.swift */,
 			);
 			path = TPWallet;
 			sourceTree = "<group>";
@@ -258,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEBA65A7289181A400E5A7B0 /* ContentView.swift in Sources */,
+				FEBA65CF289184C600E5A7B0 /* MainView.swift in Sources */,
 				FEBA65A5289181A400E5A7B0 /* TPWalletApp.swift in Sources */,
+				FEBA65D328918FE500E5A7B0 /* HomeView.swift in Sources */,
+				FEBA65D12891851900E5A7B0 /* TabBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +436,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,6 +465,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
