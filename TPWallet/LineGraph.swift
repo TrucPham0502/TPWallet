@@ -52,9 +52,13 @@ struct LineGraph: View {
                 AnimatedGraphPath(dataPoints: points)  .trim(from: 0, to: graphProgress).stroke(lineWidth: 2).fill(
                     LinearGradient(colors: [Color("00D7FF")], startPoint: .leading, endPoint: .trailing)
                     )
+                GirdPath(progress: graphProgress, points: points).fill(LinearGradient(colors: [Color("00D7FF"), Color.clear], startPoint: .top, endPoint: .bottom))
                 // Path background coloring
-                fillBG()
-                    .clipShape(
+                LinearGradient(colors: [
+                    Color("00D7FF").opacity(0.5),
+                    Color.clear,
+                ], startPoint: .top, endPoint: .bottom)
+                .clipShape(
                         AnimatedGraphPath(isFill: true, dataPoints: points)
                     )
                     .opacity(graphProgress)
@@ -64,24 +68,17 @@ struct LineGraph: View {
                     Text(currentPlot)
                         .font(.caption)
                         .foregroundColor(.white)
-                        .padding(.vertical, 6)
+                        .padding(.vertical, 10)
                         .padding(.horizontal, 10)
-                        .background(Color.gray)
-                        .offset(x: translation < plotSize.width ? plotSize.width / 2 - 2 : 0)
-                        .offset(x: translation > proxy.size.width - plotSize.width ? -plotSize.width / 2 + 2 : 0)
-                    
-                    Rectangle().fill(Color.yellow)
-                        .frame(width: 1, height: 40)
-                        .padding(.top, 10)
-                    
-                    Circle().fill(Color.yellow)
-                        .frame(width: 22, height: 22)
-                        .overlay(
-                            Circle().fill(.white)
-                                .frame(width: 10, height: 10)
+                        .background(
+                            ZStack {
+                                PopperShape(arrowPositionX: translation < plotSize.width ? 0 : (translation > proxy.size.width - plotSize.width ? plotSize.width : (plotSize.width - 20) / 2)).fill(Color("262450").opacity(0.7))
+                                PopperShape(arrowPositionX: translation < plotSize.width ? 0 : (translation > proxy.size.width - plotSize.width ? plotSize.width : (plotSize.width - 20) / 2)).stroke(lineWidth: 1).fill(Color.white.opacity(0.5))
+                            }
+                            
                         )
-                    Rectangle().fill(Color.yellow)
-                        .frame(width: 1, height: 40)
+                        .offset(x: translation < plotSize.width ? plotSize.width / 2 - 10 : 0)
+                        .offset(x: translation > proxy.size.width - plotSize.width ? -plotSize.width / 2 + 10 : 0)
                 }
                 //Fix frame..
                 //For gesture calcutation
@@ -91,7 +88,6 @@ struct LineGraph: View {
                 ,alignment: .topLeading
                 
             )
-            .contentShape(Rectangle())
             .gesture(DragGesture().onChanged({value in
                 withAnimation{ showPlot = true }
                
@@ -108,9 +104,9 @@ struct LineGraph: View {
                 _plotSize.width += 20
                 _plotSize.height += 12
                 plotSize = _plotSize
-                currentDay = days[max(min(index - 1, days.count - 1), 0)]
+                currentDay = days[max(min(index, days.count - 1), 0)]
                 //remove half width
-                offset = CGSize(width: points[index].x - (_plotSize.width / 2), height: points[index].y - _plotSize.height - 10 - ((40 + 22 + 40) / 2))
+                offset = CGSize(width: points[index].x - (_plotSize.width / 2), height: points[index].y - _plotSize.height - 10 - (50 / 2))
                 
             }).onEnded({ value in
                 withAnimation{
@@ -122,17 +118,19 @@ struct LineGraph: View {
                 out = true
             }))
             .background(
-                VStack {
-                    Spacer()
+                ZStack {
+                    let widthDay = proxy.size.width / CGFloat(data.count)
                     HStack(alignment: .bottom) {
                         ForEach(days, id: \.self) {d in
                             Text(d).foregroundColor(currentDay == d ? Color("00D7FF") : Color("7B78AA"))
                                 .font(.system(size: 13).bold())
                                 .shadowBlur(radius: currentDay == d ? 10 : 0)
-                            Spacer()
+                                .frame(width: widthDay)
+                                
                         }
                     }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
-                        .padding(.horizontal, width / CGFloat(data.count))
+                        .padding(.horizontal, widthDay)
+                    
                 }
 
             )
@@ -159,14 +157,6 @@ struct LineGraph: View {
         
     }
     
-    
-    @ViewBuilder
-    func fillBG() -> some View {
-        LinearGradient(colors: [
-            Color("00D7FF").opacity(0.5),
-            Color.clear,
-        ], startPoint: .top, endPoint: .bottom)
-    }
 }
 
 struct AnimatedGraphPath : Shape {
@@ -198,6 +188,45 @@ struct AnimatedGraphPath : Shape {
     }
 }
 
+struct PopperShape : Shape {
+    var arrowSize : CGSize = .init(width: 20, height: 10)
+    var arrowPositionX : CGFloat = 0
+    var animatableData: CGFloat {
+        get { arrowPositionX }
+        set { arrowPositionX = newValue }
+    }
+    func path(in rect: CGRect) -> Path {
+        Path {path in
+            let radius : CGFloat = 10
+            
+            let start : CGPoint = .init(x: radius, y: 0)
+            
+            path.move(to: start)
+            path.addLine(to: .init(x: rect.width - radius, y: 0))
+            
+            path.addQuadCurve(to: .init(x: rect.width, y: radius), control: .init(x: rect.width, y: 0))
+            
+            path.addLine(to: .init(x: rect.width, y: rect.height - radius))
+            
+            path.addQuadCurve(to: .init(x: rect.width - radius, y: rect.height), control: .init(x: rect.width, y: rect.height))
+            
+            path.addLine(to: .init(x: min(max(arrowPositionX + (arrowSize.width), 0), rect.width - radius), y: rect.height))
+            path.addLine(to: .init(x: min(max(arrowPositionX + (arrowSize.width/2), 0), rect.width - (arrowSize.width / 2)), y: rect.height + arrowSize.height))
+            path.addLine(to: .init(x: min(max(arrowPositionX, radius), rect.width - arrowSize.width), y: rect.height))
+            
+            path.addLine(to: .init(x: radius, y: rect.height))
+            
+            path.addQuadCurve(to: .init(x: 0, y: rect.height - radius), control: .init(x: 0, y: rect.height))
+            
+            path.addLine(to: .init(x: 0, y: radius))
+            
+            path.addQuadCurve(to: start, control: .init(x: 0, y: 0))
+            
+            path.closeSubpath()
+            
+        }
+    }
+}
 
 struct GirdPath : Shape {
     var progress : CGFloat
@@ -208,26 +237,19 @@ struct GirdPath : Shape {
     }
     func path(in rect: CGRect) -> Path {
         Path {path in
-            let minPoint : CGPoint = points.min(by: {p1, p2 in
-                p1.y > p2.y
-            }) ?? .zero
-            let maxPoint : CGPoint = points.max(by: { p1, p2 in
-                p1.y > p2.y
-            }) ?? .zero
-            let centerPoint : CGPoint = .init(x: 0, y: (minPoint.y + maxPoint.y) / 2)
-            let startPoint : CGPoint = .init(x: 0, y: rect.height)
-            path.move(to: startPoint)
-            let _points : [CGPoint] = [minPoint, centerPoint, maxPoint, .zero]
-            _points.forEach{
-                let point : CGPoint = .init(x: 0, y: $0.y)
-                path.addLine(to: point)
-                guard $0 != .zero else { return }
-                path.addLine(to: .init(x: rect.width, y: point.y))
-                path.move(to: point)
+            guard let firstPoint = points.first else { return }
+            var prevPoint : CGPoint = firstPoint
+            for index in 1 ..< points.count {
+                let newPoint = points[index]
+                path.move(to: .init(x: prevPoint.x, y: rect.height - 50))
+                path.addLine(to: prevPoint)
+                prevPoint = newPoint
             }
+            path.move(to: .init(x: prevPoint.x, y: rect.height - 50))
+            path.addLine(to: prevPoint)
         }
         .trimmedPath(from: 0, to: progress)
-        .strokedPath(StrokeStyle(lineWidth: 1, lineCap: .round, lineJoin: .round))
+        .strokedPath(StrokeStyle(lineWidth: 0.5, dash: [5]))
         
     }
 }

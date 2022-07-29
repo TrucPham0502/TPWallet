@@ -74,7 +74,6 @@ struct StatictisView: View {
                 
                 
                 LineGraph(data: [
-                    0,
                     22613.62933558064,
                     23023.361113451934,
                     23076.349218660864,
@@ -82,7 +81,6 @@ struct StatictisView: View {
                     21158.096084853874,
                     21095.608738177565,
                     23025.80497091374,
-                    0
                 ])
             }.padding(.bottom, 60).background(RoundedCorner(radius: 20, corners: [.topLeft, .topRight]).fill(Color("262450")))
             
