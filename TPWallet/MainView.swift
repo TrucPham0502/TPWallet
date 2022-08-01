@@ -9,15 +9,17 @@ import SwiftUI
 
 struct MainView: View {
     @Namespace var tabEffect
-    @State var tabSelected : TabBar = .statistic
+    @State var tabSelected : TabBar = .home
     init() {
         UITabBar.appearance().isHidden = true
     }
     var body: some View {
         TabView(selection: $tabSelected){
             HomeView().tag(TabBar.home)
-            Text("Cards").tag(TabBar.cards)
-            Text("Profile").tag(TabBar.profile)
+            Text("Cards").foregroundColor(.white).frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .background(Color("262450").ignoresSafeArea()).tag(TabBar.cards)
+            Text("Profile").foregroundColor(.white).frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .background(Color("262450").ignoresSafeArea()).tag(TabBar.profile)
             StatictisView().tag(TabBar.statistic)
         }
         .overlay(TabBarView(tabBarEffect: tabEffect, currentTab: $tabSelected), alignment: .bottom)

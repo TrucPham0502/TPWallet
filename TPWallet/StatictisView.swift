@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct StatictisView: View {
+    @State var dataLineGraph : [Double] = [
+        21095.608738177565,
+        21558.096084853874,
+        22941.878147936724,
+        22613.62933558064,
+        23023.361113451934,
+        23576.349218660864,
+        22025.80497091374,
+    ]
     @Namespace var animation
     @State var currentStatictisTab : String = "Income"
     @State var currenSegmentTab : String = "Week"
@@ -44,49 +53,75 @@ struct StatictisView: View {
             Text("$3,660.00").foregroundColor(.white)
                 .font(.system(size: 20))
                 .padding(.bottom, 30)
-            
-            VStack(alignment: .leading) {
-                let statictis = ["Income", "Outcome"]
-                HStack {
-                    ForEach(statictis, id: \.self) {st in
-                        Button {
-                            withAnimation{
-                                currentStatictisTab = st
-                            }
-                        } label: {
-                            VStack {
-                                Text(st).padding(.bottom, 10)
-                                    .foregroundColor(currentStatictisTab == st ? .white : Color("7B78AA"))
-                                    .font(.system(size: 15))
-                                if currentStatictisTab == st {
-                                    Rectangle().fill(Color("00D7FF")).frame(maxWidth: CGFloat.infinity, maxHeight: 2).shadowBlur().matchedGeometryEffect(id: "STATISTICTAB", in: animation)
-                                }
-                              
-                            }
-                        }.frame(maxWidth: CGFloat.infinity)
+            ZStack(alignment: .top) {
+                Circle().fill(Color("00D7FF")).frame(width: 150, height: 150).offset(x: 100, y: 50).blur(radius: 100)
+                VStack(alignment: .leading) {
+                    let statictis = ["Income", "Outcome"]
+                    TPTabView(data: statictis, onTap: { st in
+                        switch st {
+                        case "Income":
+                            dataLineGraph = [
+                                21095.608738177565,
+                                21558.096084853874,
+                                22941.878147936724,
+                                22613.62933558064,
+                                23023.361113451934,
+                                23576.349218660864,
+                                22025.80497091374,
+                            ]
+                        case "Outcome":
+                            dataLineGraph = [
+                                22025.80497091374,
+                                23576.349218660864,
+                                23023.361113451934,
+                                22613.62933558064,
+                                22941.878147936724,
+                                21558.096084853874,
+                                21095.608738177565,
+                                
+                            ]
+                        default:
+                            dataLineGraph = [0,0,0,0,0,0,0]
+                        }
+                    }).padding()
+                    
+                    Text("Overview").foregroundColor(.white)
+                        .font(.system(size: 17))
+                        .padding(.horizontal)
+                        .padding(.bottom)
+                    
+                    
+                    LineGraph(data: dataLineGraph)
+                }.padding(.bottom, 80).background(
+                    ZStack {
+                        RoundedCorner(radius: 20, corners: [.topLeft, .topRight]).stroke(lineWidth: 1)
+                            .fill(Color.white.opacity(0.1))
+                        RoundedCorner(radius: 20, corners: [.topLeft, .topRight]).fill(Color("19173D").opacity(0.5))
                     }
-                }.padding()
-                
-                Text("Overview").foregroundColor(.white)
-                    .font(.system(size: 17))
-                    .padding(.horizontal)
-                    .padding(.bottom)
-                
-                
-                LineGraph(data: [
-                    22613.62933558064,
-                    23023.361113451934,
-                    23076.349218660864,
-                    22941.878147936724,
-                    21158.096084853874,
-                    21095.608738177565,
-                    23025.80497091374,
-                ])
-            }.padding(.bottom, 60).background(RoundedCorner(radius: 20, corners: [.topLeft, .topRight]).fill(Color("262450")))
+                   
+                )
+                .overlay(
+                    Text("Your spending decreased from\n 5% the last week. Good job!")
+                        .foregroundColor(.white.opacity(0.87))
+                        .font(.system(size: 15))
+                        .padding()
+                        .padding(.horizontal, 30)
+                        .background(
+                            ZStack {
+                                VisualEffectView(effect: UIBlurEffect(style: .systemUltraThinMaterialDark))
+                                    .cornerRadius(30)
+                                RoundedRectangle(cornerRadius: 30).stroke(lineWidth: 1).fill(.white.opacity(0.5))
+                            }
+                        )
+                        .offset(y: -160)
+                    , alignment: .bottom)
+
+            }
+                       
             
             
         }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .background(Color("19173D").ignoresSafeArea())
+            .background(Color("262450").opacity(1).ignoresSafeArea())
            
     }
 }

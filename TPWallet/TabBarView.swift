@@ -48,7 +48,7 @@ struct TabBarView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.top, 30)
                     .foregroundColor(currentTab == tab ? Color("00D7FF") : Color("7B78AA"))
-                    .shadow(radius: currentTab == tab ? 20 : 0)
+                    .shadowBlur(radius: currentTab == tab ? 20 : 0)
             }
             
         }.frame(height: 50)

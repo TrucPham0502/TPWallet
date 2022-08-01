@@ -56,6 +56,10 @@ struct LineGraph: View {
                 // Path background coloring
                 LinearGradient(colors: [
                     Color("00D7FF").opacity(0.5),
+                    Color("00D7FF").opacity(0.4),
+                    Color("00D7FF").opacity(0.3),
+                    Color("00D7FF").opacity(0.2),
+                    Color("00D7FF").opacity(0.1),
                     Color.clear,
                 ], startPoint: .top, endPoint: .bottom)
                 .clipShape(
@@ -66,8 +70,8 @@ struct LineGraph: View {
             .overlay(
                 VStack(spacing: 0) {
                     Text(currentPlot)
-                        .font(.caption)
-                        .foregroundColor(.white)
+                        .font(.system(size: 13))
+                        .foregroundColor(.white.opacity(0.87))
                         .padding(.vertical, 10)
                         .padding(.horizontal, 10)
                         .background(
@@ -96,17 +100,22 @@ struct LineGraph: View {
                 // get index
                 let index = max(min(Int((translation / width).rounded()), data.count - 1), 0)
                 currentPlot = Double(data[index]).convertToCurrency()
-                self.translation = translation
+                withAnimation(.spring()){
+                    self.translation = translation
+                }
                 let textAttr = NSAttributedString(string: currentPlot, attributes: [.font : UIFont.preferredFont(forTextStyle: .caption1)])
                 let constraintBox = CGSize(width: proxy.size.width, height: .greatestFiniteMagnitude)
                 let textSize = textAttr.boundingRect(with: constraintBox, options: [.usesLineFragmentOrigin, .usesFontLeading], context: nil).integral.size
                 var _plotSize = textSize
                 _plotSize.width += 20
                 _plotSize.height += 12
-                plotSize = _plotSize
-                currentDay = days[max(min(index, days.count - 1), 0)]
-                //remove half width
-                offset = CGSize(width: points[index].x - (_plotSize.width / 2), height: points[index].y - _plotSize.height - 10 - (50 / 2))
+                
+                withAnimation(.spring()){
+                    plotSize = _plotSize
+                    currentDay = days[max(min(index, days.count - 1), 0)]
+                    offset = CGSize(width: points[index].x - (_plotSize.width / 2), height: points[index].y - _plotSize.height - 10 - (50 / 2))
+                }
+                
                 
             }).onEnded({ value in
                 withAnimation{
@@ -121,15 +130,16 @@ struct LineGraph: View {
                 ZStack {
                     let widthDay = proxy.size.width / CGFloat(data.count)
                     HStack(alignment: .bottom) {
-                        ForEach(days, id: \.self) {d in
-                            Text(d).foregroundColor(currentDay == d ? Color("00D7FF") : Color("7B78AA"))
-                                .font(.system(size: 13).bold())
-                                .shadowBlur(radius: currentDay == d ? 10 : 0)
+                        ForEach(Array(days.enumerated()), id: \.element) {d in
+                            Text(d.1).foregroundColor(currentDay == d.1 ? Color("00D7FF") : Color("7B78AA"))
+                                .font(currentDay == d.1 ? .system(size: 13, weight: .bold) : .system(size: 13))
+                                .shadowBlur(radius: currentDay == d.1 ? 10 : 0)
                                 .frame(width: widthDay)
+                                .offset(x: d.0 == 0 ? widthDay/2 - 10 : 0)
+                                .offset(x: d.0 == data.count - 1 ? -(widthDay/2 - 10) : 0)
                                 
                         }
                     }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
-                        .padding(.horizontal, widthDay)
                     
                 }
 
