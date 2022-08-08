@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: 'macos-latest'
 
+variables:
+  - group: demo_group1
+
 steps:
 - task: Xcode@5
   inputs:
