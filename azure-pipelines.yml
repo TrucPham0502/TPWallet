@@ -45,3 +45,4 @@ steps:
     serverEndpoint: 'Build CI'
     appSlug: 'trucpham.bc-gmail.com/DemoApp'
     appFile: '**/*.ipa'
+    releaseNotesInput: "BETA"
