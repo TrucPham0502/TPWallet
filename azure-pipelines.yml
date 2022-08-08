@@ -44,5 +44,5 @@ steps:
   inputs:
     serverEndpoint: 'Build CI'
     appSlug: 'trucpham.bc-gmail.com/DemoApp'
-    appFile: '**/*.ipa'
+    appFile: '$(build.artifactStagingDirectory)'
     releaseNotesInput: "BETA"
