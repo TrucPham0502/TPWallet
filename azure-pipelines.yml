@@ -44,6 +44,6 @@ steps:
   inputs:
     serverEndpoint: 'Bulid CI Demo'
     appSlug: 'trucpham.bc-gmail.com/DemoApp'
-    appFile: '$(build.artifactStagingDirectory)/*.ipa'
+    appFile: '$(build.artifactStagingDirectory)'
     releaseNotesInput: "BETA"
 
