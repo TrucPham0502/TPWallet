@@ -40,6 +40,10 @@ steps:
     targetFolder: '$(build.artifactStagingDirectory)'
     overWrite: true
     
-- task: PublishBuildArtifacts@1
+- task: AppCenterDistribute@3
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    serverEndpoint: 'Build CI'
+    appSlug: 'trucpham.bc-gmail.com/DemoApp'
+    appFile: '**/*.ipa'
+    releaseNotesOption: 'input'
+    destinationType: 'groups'            
