@@ -42,6 +42,6 @@ steps:
     
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(build.artifactStagingDirectory)/output/$(sdk)/$(configuration)' 
-    artifactName: 'drop' 
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
     publishLocation: 'Container'
