@@ -45,5 +45,3 @@ steps:
     serverEndpoint: 'Build CI'
     appSlug: 'trucpham.bc-gmail.com/DemoApp'
     appFile: '**/*.ipa'
-    releaseNotesOption: 'input'
-    destinationType: 'groups'            
