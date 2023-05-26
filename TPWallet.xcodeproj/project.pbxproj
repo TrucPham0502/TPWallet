@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E1687B32A1F25EB00FE9CC5 /* ChartHomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1687B22A1F25EB00FE9CC5 /* ChartHomeData.swift */; };
 		FE5CFE6C2893E0D5006BB607 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CFE6B2893E0D5006BB607 /* WalletView.swift */; };
 		FE5CFE6E2893E274006BB607 /* TPTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CFE6D2893E274006BB607 /* TPTabView.swift */; };
 		FEBA65A5289181A400E5A7B0 /* TPWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA65A4289181A400E5A7B0 /* TPWalletApp.swift */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E1687B22A1F25EB00FE9CC5 /* ChartHomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHomeData.swift; sourceTree = "<group>"; };
+		8E2F76372A1F65DD002302CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FE5CFE6B2893E0D5006BB607 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		FE5CFE6D2893E274006BB607 /* TPTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPTabView.swift; sourceTree = "<group>"; };
 		FEBA65A1289181A400E5A7B0 /* TPWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +111,7 @@
 		FEBA65A3289181A400E5A7B0 /* TPWallet */ = {
 			isa = PBXGroup;
 			children = (
+				8E2F76372A1F65DD002302CB /* Info.plist */,
 				FEBA65A4289181A400E5A7B0 /* TPWalletApp.swift */,
 				FEBA65A6289181A400E5A7B0 /* ContentView.swift */,
 				FEBA65A8289181A700E5A7B0 /* Assets.xcassets */,
@@ -119,6 +123,7 @@
 				FEBA65D62892C04900E5A7B0 /* LineGraph.swift */,
 				FE5CFE6B2893E0D5006BB607 /* WalletView.swift */,
 				FE5CFE6D2893E274006BB607 /* TPTabView.swift */,
+				8E1687B22A1F25EB00FE9CC5 /* ChartHomeData.swift */,
 			);
 			path = TPWallet;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				FEBA65A7289181A400E5A7B0 /* ContentView.swift in Sources */,
 				FEBA65D72892C04900E5A7B0 /* LineGraph.swift in Sources */,
 				FEBA65CF289184C600E5A7B0 /* MainView.swift in Sources */,
+				8E1687B32A1F25EB00FE9CC5 /* ChartHomeData.swift in Sources */,
 				FEBA65A5289181A400E5A7B0 /* TPWalletApp.swift in Sources */,
 				FEBA65D328918FE500E5A7B0 /* HomeView.swift in Sources */,
 				FEBA65D12891851900E5A7B0 /* TabBarView.swift in Sources */,
@@ -442,11 +448,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TPWallet/Preview Content\"";
+				DEVELOPMENT_TEAM = 7755R4CX4U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TPWallet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -458,8 +467,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TrucPham.TPWallet;
+				PRODUCT_BUNDLE_IDENTIFIER = beta.ftel.cmr.camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -471,11 +481,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TPWallet/Preview Content\"";
+				DEVELOPMENT_TEAM = 7755R4CX4U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TPWallet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -487,8 +500,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TrucPham.TPWallet;
+				PRODUCT_BUNDLE_IDENTIFIER = beta.ftel.cmr.camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
